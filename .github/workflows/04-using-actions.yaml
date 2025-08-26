@@ -10,6 +10,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # Step 2:L Print out the file structure
-      - name: List files
-        run: ls -R
+      # Step 2: Setup Node
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with: 
+          node-version: '20.x'
+      - name: Install Dependencies
+      - run: npm ci
+
